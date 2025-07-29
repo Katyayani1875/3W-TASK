@@ -1,15 +1,10 @@
-// A humanly written comment:
-// This is our logbook. Every time someone claims points,
-// we create a record here. This is great for auditing or
-// for future features like showing a user's claim history.
-// We link it back to the User model using a 'ref'.
-
 const mongoose = require('mongoose');
 
 const historySchema = new mongoose.Schema({
   userId: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'User', // This creates a reference to the User model
+
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User', 
     required: [true, 'History must belong to a user.'],
   },
   pointsClaimed: {
