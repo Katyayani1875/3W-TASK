@@ -5,8 +5,8 @@ require('dotenv').config();
 
 const app = express();
 const allowedOrigins = [
-  'https://leaderboard-task-coral.vercel.app/', 
-  'http://localhost:5173',                   // Your local frontend for testing
+  'https://leaderboard-task-coral.vercel.app', 
+  'http://localhost:5173',                
 ];
 
 const corsOptions = {
